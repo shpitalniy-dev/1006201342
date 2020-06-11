@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import Profile from './components/profile/Profile.jsx';
@@ -25,31 +24,21 @@ const App = props => {
         dispatch(actions.initialization());
     }, []);
 
-    const getContent = useCallback(() => {
-        if (isLoading) {
-            return <Spinner />;
-        }
-        return (
-            <ThemeProvider theme={theme}>
-                <AppWrapper>
-                    <Profile
-                        user={user}
-                        dictionary={dictionary}
-                    />
-                    <Comments 
-                        user={user}
-                        dictionary={dictionary}
-                    />
-                </AppWrapper>
-            </ThemeProvider>
-        );
-    }, [isLoading, user]);
-
-    return getContent();
+    return isLoading ?
+        <Spinner />
+        :
+        <ThemeProvider theme={theme}>
+            <AppWrapper>
+                <Profile
+                    user={user}
+                    dictionary={dictionary}
+                />
+                <Comments
+                    user={user}
+                    dictionary={dictionary}
+                />
+            </AppWrapper>
+        </ThemeProvider>;
 };
-
-App.propTypes = {
-
-}
 
 export default React.memo(App);

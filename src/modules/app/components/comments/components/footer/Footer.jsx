@@ -13,10 +13,10 @@ const Footer = props => {
     const textAreaRef = React.useRef();
 
     const dispatch = useDispatch();
-    const sendMessage = () => {
+    const sendMessage = useCallback(() => {
         dispatch(actions.sendMessage(textAreaRef.current.value));
         textAreaRef.current.value = '';
-    };
+    }, []);
 
     const keyDownHandler = useCallback(event => {
         if (event.keyCode === 13 && event.ctrlKey) {
