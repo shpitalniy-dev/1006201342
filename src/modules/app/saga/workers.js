@@ -33,5 +33,8 @@ export function* sendMessage(action) {
         message: action.payload,
     });
 
-    yield put(actions.setCommentsData(commentsData.slice()));
+    yield put(actions.setCommentsData({
+        comments: commentsData.length,
+        commentsData: commentsData.slice(),
+    }));
 }

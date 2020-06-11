@@ -23,7 +23,8 @@ export const appReducer = (state = initialState, action) => {
                 ...state,
                 user: {
                     ...state.user,
-                    commentsData: action.payload,
+                    comments: action.payload.comments,
+                    commentsData: action.payload.commentsData,
                 },
             };
         default:
