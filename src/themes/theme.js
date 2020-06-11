@@ -16,5 +16,18 @@ export const getStylesByTheme = theme => {
         servicesBlockBodyBorder: matrix.colors.color_05,
         servicesFirstBarBackground: matrix.colors.color_06,
         servicesOtherBarBackground: matrix.colors.color_07,
+
+        commentsHeaderModeColor: matrix.colors.color_08,
+
+        commentsMessageBlock: matrix.colors.color_09,
+        commentsMessageBlockBorder: matrix.colors.color_10,
+        commentsMessageHeaderDateColor: matrix.colors.color_02,
+
+        commentsFooterBackground: matrix.colors.color_11,
+        commentsFooterTextAreaBorder: matrix.colors.color_13,
+        commentsFooterTextAreaBackground: matrix.colors.color_12,
+
+        buttonColor: matrix.colors.color_01,
+        buttonBackground: matrix.colors.color_14,
     };
 };

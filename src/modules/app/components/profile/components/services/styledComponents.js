@@ -78,7 +78,7 @@ Component.LeftPartText = styled.div`
     box-sizing: border-box;
     background: transparent;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 5px;
 `;
 
 export const Footer = styled.div`

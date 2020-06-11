@@ -18,6 +18,14 @@ export const appReducer = (state = initialState, action) => {
                 ...state,
                 user: action.payload,
             };
+        case actionTypes.SET_COMMENTS_DATA: 
+            return {
+                ...state,
+                user: {
+                    ...state.user,
+                    commentsData: action.payload,
+                },
+            };
         default:
             return state;
     }

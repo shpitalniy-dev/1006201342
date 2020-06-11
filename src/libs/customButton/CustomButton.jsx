@@ -11,8 +11,10 @@ const CustomButton = props => {
             width={props.width}
             height={props.height}
             onClick={props.onClick}
+            fontSize={props.fontSize}
             disabled={props.disabled}
             children={props.children}
+            borderRadius={props.borderRadius}
         />
     )
 };
@@ -21,11 +23,13 @@ CustomButton.propTypes = {
     type: PropTypes.string,
     style: PropTypes.object,
     width: PropTypes.string,
-    height: PropTypes.number,
+    height: PropTypes.string,
     onClick: PropTypes.func,
+    fontSize: PropTypes.string,
     disabled: PropTypes.bool,
     children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     buttonRef: PropTypes.object,
+    borderRadius: PropTypes.string,
 }
 
 export default React.memo(CustomButton);

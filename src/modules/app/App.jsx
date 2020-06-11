@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import Profile from './components/profile/Profile.jsx';
 import Spinner from '../../libs/spinner/Spinner.jsx';
+import Comments from './components/comments/Comments.jsx';
 import * as selectors from './selectors';
 import * as actions from './actions';
 import {
@@ -35,10 +36,14 @@ const App = props => {
                         user={user}
                         dictionary={dictionary}
                     />
+                    <Comments 
+                        user={user}
+                        dictionary={dictionary}
+                    />
                 </AppWrapper>
             </ThemeProvider>
         );
-    }, [isLoading]);
+    }, [isLoading, user]);
 
     return getContent();
 };

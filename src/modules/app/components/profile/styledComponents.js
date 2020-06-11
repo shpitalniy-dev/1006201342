@@ -5,6 +5,8 @@ export const ProfileWrapper = styled.div`
     height: fit-content;
     display: flex;
     box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 20px 20px 0 20px;
 `;
 
 ProfileWrapper.LeftPart = styled.div`

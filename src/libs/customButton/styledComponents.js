@@ -1,19 +1,15 @@
 import styled from 'styled-components';
 
 export const ButtonElement = styled.button`
-    cursor: pointer;
-    width: ${props => props.width ? props.width : '100px'};
-    height: ${props => props.height ? props.height : 40}px;
-    font-weight: 500;
-    border: none;
-    border-radius: 3px;
     color: ${props => props.theme.buttonColor};
+    width: ${props => props.width ? props.width : '100px'};
+    height: ${props => props.height ? props.height : '40px'};
+    border: none;
+    cursor: pointer;
     background: ${props => props.theme.buttonBackground};
-
-    &:hover{
-        color: ${props => props.theme.buttonColorHover} !important;
-        background: ${props => props.theme.buttonBackgroundHover} !important; 
-    }
+    font-size: ${props => props.fontSize ? props.fontSize : 'inherit'};
+    font-weight: bold;
+    border-radius: ${props => props.borderRadius ? props.borderRadius : '5px'};
 
     &:disabled{
         opacity: .5;

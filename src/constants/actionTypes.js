@@ -8,4 +8,7 @@ export default keyMirror({
     SET_USER_DATA: null,
     INITIALIZATION: null,
     SET_IS_LOADING: null,
+
+    SEND_MESSAGE: null,
+    SET_COMMENTS_DATA: null,
 });
